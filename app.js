@@ -1,10 +1,12 @@
-let container = document.querySelector("#container");
-let dino = document.querySelector("#dino");
-let block = document.querySelector("#block");
-let road = document.querySelector("#road");
-let cloud = document.querySelector("#cloud");
-let score = document.querySelector("#score");
-let gameOver = document.querySelector("#gameOver");
+const container = document.querySelector("#container");
+const dino = document.querySelector("#dino");
+const block = document.querySelector("#block");
+const road = document.querySelector("#road");
+const cloud = document.querySelector("#cloud");
+const score = document.querySelector("#score");
+const gameOver = document.querySelector("#gameOver");
+const getscore = document.getElementById('showscore')
+
 
 //declaring variable for score
 let interval = null;
@@ -61,6 +63,7 @@ let result = setInterval(() => {
         //        console.log("Game Over");
 
         gameOver.style.display = "block";
+        getscore.innerHTML = `${playerScore}`
         block.classList.remove("blockActive");
         road.firstElementChild.style.animation = "none";
         cloud.firstElementChild.style.animation = "none";

@@ -134,6 +134,10 @@ body {
     top: 20px;
     right: 10px;
 }
+#showscore{
+    display: flex;
+    justify-content: center;
+}
 
 #gameOver {
     display: none;
