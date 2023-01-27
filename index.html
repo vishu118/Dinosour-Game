@@ -8,12 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="score">0</div>
         <div class="msg"> Press Any Key To Start.</div>
         <img src="/images/ground.png" class="ground">
         <img src="/images/ground.png" class="ground">
         <img src="/images/dino-stationary.png" class="dinasour">
+    </div> -->
+
+    <div id="game">
+        <div id="block">
+            <img src="/images/cactus.png" alt="">
+        </div>
+        <div id="dino">
+            <img src="/images/dino-stationary.png" alt="">
+        </div>
+
+        
     </div>
+    <div id="result">
+        <h1>Game Over</h1>
+        <h3 id="score">0</h3>
+        <button id="btn" onclick="location.reload()">Restart</button>
+    </div>
+    <script src="/app.js"></script>
 </body>
 </html>
