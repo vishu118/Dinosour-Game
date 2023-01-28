@@ -93,6 +93,9 @@ body {
     left: 0;
     animation: none;
 }
+.roadActive{
+    animation : roadAnimate 1.5s linear infinite
+}
 
 @keyframes roadAnimate {
     0% {
@@ -119,6 +122,11 @@ body {
     left: -2000px;
     animation: none;
 }
+
+.cloudActive{
+    animation: cloudAnimate 20s linear infinite ;
+}
+
 
 @keyframes cloudAnimate {
     0% {

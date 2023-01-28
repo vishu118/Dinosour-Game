@@ -9,25 +9,24 @@ const getscore = document.getElementById('showscore')
 
 
 //declaring variable for score
-let interval = null;
 let playerScore = 0;
 
 
 //function for score
 let scoreCounter = () => {
     playerScore++;
-    score.innerHTML = `Score <b>${playerScore}</b>`;
+    score.innerHTML = `Score : <b>${playerScore}</b>`;
 }
 
 
 //start Game
 window.addEventListener("keydown", (start) => {
-    //    console.log(start);
+   
     if (start.code == "Space") {
         gameOver.style.display = "none";
         block.classList.add("blockActive");
-        road.firstElementChild.style.animation = "roadAnimate 1.5s linear infinite";
-        cloud.firstElementChild.style.animation = "cloudAnimate 20s linear infinite";
+        road.classList.add("roadActive");
+        cloud.classList.add("cloudActive");
 
         //score
          playerScore = 0;
@@ -44,7 +43,7 @@ window.addEventListener("keydown", (e) => {
         if (dino.classList != "dinoActive") {
             dino.classList.add("dinoActive");
 
-            //                remove class after 0.5 seconds
+            // remove class after 0.5 seconds
             setTimeout(() => {
                 dino.classList.remove("dinoActive");
             }, 500);
@@ -65,8 +64,8 @@ let result = setInterval(() => {
         gameOver.style.display = "block";
         getscore.innerHTML = `${playerScore}`
         block.classList.remove("blockActive");
-        road.firstElementChild.style.animation = "none";
-        cloud.firstElementChild.style.animation = "none";
+        road.classList.remove("roadActive");
+        cloud.classList.remove("cloudActive");
         clearInterval(interval);
         playerScore = 0;
     }
