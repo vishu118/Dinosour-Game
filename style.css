@@ -7,6 +7,9 @@
 }
 
 body {
+    /* background-image: url(/images/bg.png);
+    background-repeat: no-repeat;
+   background-size: 100vw ; */
     display: grid;
     place-items: center;
     height: 100vh;
@@ -68,7 +71,7 @@ body {
 
 @keyframes blockAnimate {
     0% {
-        right: 0%;
+        right: -125px;
     }
 
     100% {
@@ -97,7 +100,7 @@ body {
     }
 
     100% {
-        left: -800px;
+        left: -200px;
     }
 }
 
