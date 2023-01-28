@@ -5,11 +5,15 @@ const road = document.querySelector("#road");
 const cloud = document.querySelector("#cloud");
 const score = document.querySelector("#score");
 const gameOver = document.querySelector("#gameOver");
-const getscore = document.getElementById('showscore')
+const getscore = document.querySelector("#showscore")
 
 
 //declaring variable for score
 let playerScore = 0;
+audio = new Audio('music.mp3');
+gameover = new Audio('gameover.wav')
+
+
 
 
 //function for score
@@ -27,6 +31,9 @@ window.addEventListener("keydown", (start) => {
         block.classList.add("blockActive");
         road.classList.add("roadActive");
         cloud.classList.add("cloudActive");
+        
+            audio.play();
+        
 
         //score
          playerScore = 0;
@@ -66,6 +73,8 @@ let result = setInterval(() => {
         block.classList.remove("blockActive");
         road.classList.remove("roadActive");
         cloud.classList.remove("cloudActive");
+        audio.pause();
+        gameover.play()
         clearInterval(interval);
         playerScore = 0;
     }

@@ -130,7 +130,7 @@ body {
 
 @keyframes cloudAnimate {
     0% {
-        left: -2000px;
+        left: -200px;
     }
 
     100% {
